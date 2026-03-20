@@ -1,12 +1,10 @@
-import datetime
-
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, redirect, url_for
 from flask_migrate import Migrate
-from flask_login import LoginManager, login_required, current_user
+from flask_login import LoginManager
 import os
 from dotenv import load_dotenv
-from models import User, Task, db
-from auth import auth_bp
+from models import User, db
+from app.auth import auth_bp
 from tasks import task_bp
 
 

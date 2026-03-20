@@ -1,5 +1,5 @@
-from flask import request, redirect, url_for, flash
-from models import db, Task
+from flask import flash
+from app.models import db, Task
 from flask_login import login_required, current_user
 from flask import render_template, request, redirect, url_for
 from . import task_bp
