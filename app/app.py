@@ -3,9 +3,9 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 import os
 from dotenv import load_dotenv
-from models import User, db
-from app.auth import auth_bp
-from tasks import task_bp
+from app.models import User, db
+from app.auth.routes import auth_bp
+from app.tasks.routes import task_bp
 
 
 
