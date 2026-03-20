@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+  <form method="POST" action="{{ url_for('auth.register') }}">
+        <input type="text" name="username" placeholder="Имя пользователя" required maxlength="100">
+        <input type="text" name="email" placeholder="Почта" required maxlength="100">
+        <input type="text" name="password" placeholder="Пароль" required maxlength="100">
+      <button type="submit">Ввод</button>
+    </form>
+
+</body>
+</html>
