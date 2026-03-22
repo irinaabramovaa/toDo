@@ -1,9 +1,8 @@
 from flask_login import UserMixin
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_sqlalchemy import SQLAlchemy
+from app.app import db
 
-db = SQLAlchemy()
 
 class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
