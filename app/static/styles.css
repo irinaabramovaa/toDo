@@ -96,3 +96,153 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Основное тело страницы */
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+/* Форма добавления задачи */
+.form-add {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-add input[type="text"] {
+    padding: 8px 12px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-add input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+.form-add button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.form-add button:hover {
+    background-color: #0056b3;
+}
+
+/* Карточка задачи */
+.task {
+    background-color: white;
+    padding: 12px 16px;
+    margin: 8px auto;
+    max-width: 500px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task.completed {
+    opacity: 0.7;
+}
+
+/* Заголовок задачи */
+.task-title {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-title.line-through {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Дата задачи */
+.task-title small {
+    font-size: 0.75rem;
+}
+
+/* Действия с задачей */
+.task-actions form {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.btn-small {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #b02a37;
+}
+
+/* Стиль для пустого состояния */
+p {
+    font-size: 1rem;
+}
+
+/* Ссылка выхода */
+a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #0056b3;
+}
