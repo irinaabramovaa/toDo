@@ -12,7 +12,8 @@ login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='static',    # Относительно app/
+                template_folder='templates')
     basedir = os.path.abspath(os.path.dirname(__file__))
 
     app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev')
