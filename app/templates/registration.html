@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-  <form method="POST" action="{{ url_for('auth.register') }}">
+<div class="login-page">
+  <div class="form">
+  <form class="login-form" method="POST" action="{{ url_for('auth.register') }}">
         <input type="text" name="username" placeholder="Имя пользователя" required maxlength="100">
         <input type="text" name="email" placeholder="Почта" required maxlength="100">
         <input type="text" name="password" placeholder="Пароль" required maxlength="100">
       <button type="submit">Ввод</button>
+            <p class="message">Уже есть аккаунт?
+        <a href="{{ url_for('auth.login') }}">Вход</a>
+      </p>
     </form>
+  </div>
+</div>
 
 </body>
 </html>
