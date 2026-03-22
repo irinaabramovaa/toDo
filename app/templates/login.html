@@ -1,16 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Авторизация</title>
-</head>
-<body>
-
-<form method="POST" action="{{ url_for('auth.login') }}">
-        <input type="text" name="username" placeholder="Имя пользователя" required maxlength="100">
-        <input type="text" name="password" placeholder="Пароль" required maxlength="100">
-        <button type="submit">Ввод</button>
-    </form>
-<a  href="{{ url_for('auth.register') }}">Регистрация</a>
-</body>
-</html>
+<!DOCTYPE html> <html lang="ru"> <head> <meta charset="UTF-8"> <title>Авторизация</title> <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Google Fonts --> <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet"> </head> <body> <div class="login-page"> <div class="form"> <form class="login-form" method="POST" action=""> <input type="text" name="username" placeholder="Логин" required> <input type="password" name="password" placeholder="Пароль" required> <button type="submit">Войти</button> <p class="message">Нет аккаунта? <a href="{{ url_for('auth.register') }}">Регистрация</a> </p> </form> </div> </div> </body> </html>
